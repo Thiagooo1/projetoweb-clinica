@@ -1,0 +1,32 @@
+λ mysql -u root -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 10
+Server version: 8.0.30 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> CREATE DATABASE IF NOT EXISTS clinica_medica CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;  USE clinica_medica;
+Query OK, 1 row affected, 1 warning (0.01 sec)
+
+Database changed
+mysql> CREATE TABLE IF NOT EXISTS medicos (     id_medico INT AUTO_INCREMENT PRIMARY KEY,     nome VARCHAR(100) NOT NULL,crm VARCHAR(20) NOT NULL UNIQUE,     especialidade VARCHAR(50) NOT NULL,     telefone VARCHAR(20),     email VARCHAR(100),data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP ) ENGINE=InnoDB;
+Query OK, 0 rows affected, 1 warning (0.01 sec)
+
+mysql> CREATE TABLE IF NOT EXISTS pacientes (     id_paciente INT AUTO_INCREMENT PRIMARY KEY,     nome VARCHAR(100) NOT NULL,     cpf VARCHAR(14) NOT NULL UNIQUE,data_nascimento DATE NOT NULL,     sexo ENUM('M', 'F', 'Outro') NOT NULL,     telefone VARCHAR(20),     email VARCHAR(100),endereco TEXT,     data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP ) ENGINE=InnoDB;
+Query OK, 0 rows affected, 1 warning (0.01 sec)
+
+mysql> CREATE TABLE IF NOT EXISTS consultas (     id_consulta INT AUTO_INCREMENT PRIMARY KEY,     id_paciente INT NOT NULL,id_medico INT NOT NULL,     data_hora DATETIME NOT NULL,     status ENUM('Agendada', 'Realizada', 'Cancelada') DEFAULT 'Agendada',     observacoes TEXT,
+    -> id_medico INT NOT NULL,     data_hora DATETIME NOT NULL,     status ENUM('Agendada', 'Realizada', 'Cancelada') DEFAULT 'Agendada',     observacoes TEXT,
+    -> CREATE TABLE IF NOT EXISTS consultas (     id_consulta INT AUTO_INCREMENT PRIMARY KEY,     id_paciente INT NOT NULL,id_medico INT NOT NULL,     data_hora DATETIME NOT NULL,     status ENUM('Agendada', 'Realizada', 'Cancelada') DEFAULT 'Agendada',     observacoes TEXT;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CREATE TABLE IF NOT EXISTS consultas (     id_consulta INT AUTO_INCREMENT PRIMAR' at line 3
+mysql> CREATE TABLE IF NOT EXISTS consultas (     id_consulta INT AUTO_INCREMENT PRIMARY KEY,     id_paciente INT NOT NULL,id_medico INT NOT NULL,     data_hora DATETIME NOT NULL,     status ENUM('Agendada', 'Realizada', 'Cancelada') DEFAULT 'Agendada',     observacoes TEXT, CONSTRAINT fk_consulta_paciente FOREIGN KEY (id_paciente)         REFERENCES pacientes(id_paciente)         ON DELETE CASCADE         ON UPDATE CASCADE,CONSTRAINT fk_consulta_medico FOREIGN KEY (id_medico)         REFERENCES medicos(id_medico)         ON DELETE CASCADE         ON UPDATE CASCADE ) ENGINE=InnoDB;
+Query OK, 0 rows affected, 1 warning (0.01 sec)
+
+mysql>

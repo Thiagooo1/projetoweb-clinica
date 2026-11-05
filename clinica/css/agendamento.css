@@ -1,0 +1,111 @@
+body{
+background-color: #ffffff;
+align-items: center;
+justify-content: center;
+
+text-align: center;
+}
+/* div que esta com tudo dentro*/
+#mae{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+width: 1400px;
+height: 600px;
+background-color: rgb(255, 255, 255);
+margin-left: 110px;
+box-shadow:2px 1px 20px;
+border-radius: 10px;
+
+}
+/*escolha da consulta*/
+#escolhacons{
+    width: 220px;
+    height:400px;
+   padding: 20px;
+    border-radius: 10%;
+    background-color:rgb(255, 255, 255);
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    
+
+}
+h2{
+    font-size:30px;
+    color: rgb(238, 151, 151);
+padding: 20px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Cards de agendamento */
+
+.card_agendamento {
+    margin-bottom: 10px;
+    border: 1px solid #ebdddc;
+    border-radius: 10px;
+    background-color: #ffffff;
+    overflow: hidden;
+    transition: 0.2s ease;
+}
+
+/* Texto dos cards */
+.card_agendamento label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 18px;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+    color: #263849;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+/* Efeito ao passar o mouse */
+.card_agendamento:hover {
+    border-color: #ed5e5e;
+    background-color: #f4f8fd;
+}
+
+/* Cor do botão de seleção */
+.card_agendamento input[type="radio"] {
+    accent-color: #cf4646;
+    cursor: pointer;
+    margin: 0;
+}
+
+/* Destaca o cartão selecionado */
+.card_agendamento:has(input:checked) {
+    border-color: #c72828;
+    background-color: #fceaea;
+    box-shadow: 0 2px 8px rgba(40, 121, 199, 0.12);
+}
+
+/* começo da estilizaçao do card de escolha dos profissionais*/
+
+#escolhaprof{
+width: 220px;
+    height:400px;
+   padding: 20px;
+    border-radius: 10%;
+    background-color:rgb(255, 255, 255);
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    margin-left: 600px;
+    margin-top:-300px;
+}
+
+.card_profissional{
+ margin-bottom: 10px;
+    border: 1px solid #ebdddc;
+    border-radius: 10px;
+    background-color: #ffffff;
+    overflow: hidden;
+    transition: 0.2s ease;
+}
+   

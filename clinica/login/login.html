@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas de Cadastro - Clínica Médica</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+<!--medico-->
+    <div id="tela-login" class="container-card">
+        <h2>Acesso ao Sistema</h2>
+        <form id="form-login">
+            <div class="grupo-campo">
+                <label for="usuario">Usuário / E-mail</label>
+                <input type="text" id="usuario" required placeholder="Digite seu usuário">
+            </div>
+            <div class="grupo-campo">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" required placeholder="Digite sua senha">
+            </div>
+            <button type="submit" class="btn-primario">Entrar</button>
+        </form>
+    </div>
+
+    <!--menu de cadastro-->
+    <div id="painel-sistema" class="container-card oculto">
+        <nav class="menu-navegacao">
+            <button onclick="mostrarAba('aba-medicos')">Cadastrar Médico</button>
+            <button onclick="mostrarAba('aba-pacientes')">Cadastrar Paciente</button>
+            <button onclick="mostrarAba('aba-consultas')">Agendar Consulta</button>
+            <button onclick="logout()" class="btn-sair">Sair</button>
+        </nav>
+
+        <!-- medico-->
+        <section id="aba-medicos" class="conteudo-aba">
+            <h3>Cadastro de Médico</h3>
+            <form id="form-medico">
+                <div class="grupo-campo">
+                    <label>Nome Completo</label>
+                    <input type="text" id="medico-nome" required>
+                </div>
+                <div class="grupo-campo">
+                    <label>CRM</label>
+                    <input type="text" id="medico-crm" required>
+                </div>
+                <div class="grupo-campo">
+                    <label>Especialidade</label>
+                    <input type="text" id="medico-especialidade" required>
+                </div>
+                <button type="submit" class="btn-primario">Salvar Médico</button>
+            </form>
+        </section>
+
+        <!--paciente-->
+        <section id="aba-pacientes" class="conteudo-aba oculto">
+            <h3>Cadastro de Paciente</h3>
+            <form id="form-paciente">
+                <div class="grupo-campo">
+                    <label>Nome Completo</label>
+                    <input type="text" id="paciente-nome" required>
+                </div>
+                <div class="grupo-campo">
+                    <label>CPF</label>
+                    <input type="text" id="paciente-cpf" required>
+                </div>
+                <div class="grupo-campo">
+                    <label>Data de Nascimento</label>
+                    <input type="date" id="paciente-data-nasc" required>
+                </div>
+                <button type="submit" class="btn-primario">Salvar Paciente</button>
+            </form>
+        </section>
+
+        <!--consulta-->
+        <section id="aba-consultas" class="conteudo-aba oculto">
+            <h3>Agendamento de Consulta</h3>
+            <form id="form-consulta">
+                <div class="grupo-campo">
+                    <label>Paciente</label>
+                    <select id="consulta-paciente" required>
+                        <option value="">Selecione o paciente</option>
+                    </select>
+                </div>
+                <div class="grupo-campo">
+                    <label>Médico</label>
+                    <select id="consulta-medico" required>
+                        <option value="">Selecione o médico</option>
+                    </select>
+                </div>
+                <div class="grupo-campo">
+                    <label>Data da Consulta</label>
+                    <input type="date" id="consulta-data" required>
+                </div>
+                <div class="grupo-campo">
+                    <label>Horário</label>
+                    <input type="time" id="consulta-hora" required>
+                </div>
+                <button type="submit" class="btn-primario">Agendar Consulta</button>
+            </form>
+
+            <div class="lista-consultas">
+                <h4>Consultas Agendadas</h4>
+                <ul id="lista-consultas-ul"></ul>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

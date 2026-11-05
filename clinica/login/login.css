@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.container-card {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 24px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.grupo-campo {
+    margin-bottom: 16px;
+}
+
+.grupo-campo label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #333;
+}
+
+.grupo-campo input, 
+.grupo-campo select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn-primario {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 12px;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-primario:hover {
+    background-color: #0056b3;
+}
+
+.menu-navegacao {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.menu-navegacao button {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #007bff;
+    background: white;
+    color: #007bff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.menu-navegacao button.btn-sair {
+    border-color: #dc3545;
+    color: #dc3545;
+}
+
+.oculto {
+    display: none;
+}
+
+.lista-consultas {
+    margin-top: 24px;
+    border-top: 1px solid #eee;
+    padding-top: 16px;
+}
+
+.lista-consultas li {
+    list-style: none;
+    padding: 8px;
+    background: #f8f9fa;
+    margin-bottom: 6px;
+    border-radius: 4px;
+}

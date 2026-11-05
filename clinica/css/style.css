@@ -1,0 +1,187 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
+#menu {
+    background-color: #f31e1e;
+    color: rgb(255, 255, 255);
+font-size: large;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+gap: 460px;
+    padding: 20px 50px ;
+    font-family: sans-serif;
+}
+
+
+
+header h1 {
+    font-size: 28px;
+    
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* INÍCIO */
+
+.inicio {
+    min-height: 450px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 50px;
+    background-color: #ffffff;
+}
+
+.texto-inicio {
+    max-width: 600px;
+}
+
+.texto-inicio h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.texto-inicio p {
+    font-size: 20px;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+
+/* BOTÕES */
+
+button {
+    background-color: #ec2a2ad5;
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    padding: 12px 20px;
+
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #681212;
+}
+
+
+/* ESPECIALIDADES */
+
+#especialidades {
+    padding: 60px 50px;
+    text-align: center;
+}
+
+#especialidades h2 {
+    margin-bottom: 35px;
+    color: #771212;
+}
+
+.especialidades {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.card {
+    background-color: white;
+
+    width: 250px;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 3px 10px #0002;
+}
+
+.card h3 {
+    color: #ca1400;
+    margin-bottom: 15px;
+}
+
+.card p {
+    line-height: 1.5;
+}
+
+
+/* SOBRE */
+
+.sobre {
+   background-color: white;
+
+    padding: 60px 50px;
+
+    text-align: center;
+}
+
+.sobre h2 {
+    color: #f33333;
+    margin-bottom: 20px;
+}
+
+.sobre p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+
+/* CONTATO */
+
+#contato {
+    padding: 60px 50px;
+    text-align: center;
+}
+
+#contato h2 {
+    color: #e92a2a;
+    margin-bottom: 20px;
+}
+
+#contato p {
+    margin: 10px;
+}
+
+
+
+
+footer {
+    background-color: #652222;
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+}

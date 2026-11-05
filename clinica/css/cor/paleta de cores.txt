@@ -1,0 +1,4 @@
+ciano:
+#22CFFF
+aba lateral:
+#6BDFFF
